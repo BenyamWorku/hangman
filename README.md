@@ -3,10 +3,10 @@ Hangman is a classic game in which a player thinks of a word and the other playe
 
 This is an implementation of the Hangman game, where the computer thinks of a word and the user tries to guess it. 
 
-#Milestone 1
+# Milestone 1
 Setup Github
 
-#Milestone 2
+# Milestone 2
 This code fragment checks if the user's input is a single letter. It also generates random fruits from the list.
 ```
 import random
