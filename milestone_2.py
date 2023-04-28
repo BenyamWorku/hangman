@@ -1,3 +1,4 @@
 import random
 word_list=["avocado","bananas","apples","mangoes","papaya"]
-print(word_list)
+word=random.choice(word_list)
+print(word)
