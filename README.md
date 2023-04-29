@@ -19,3 +19,10 @@ else:
     print("Oops,That isn't a valid input")
 print(word)
 ```
+# Milestone 3
+The two functions created are:
+ask_for_input() and check_guess().
+The former asks for input from the user and saves it into the guess variable .
+It makes sure the input is just one letter.
+The latter function checks whether the guessed letter is in the randomly generated word.
+This function doesn't give the user the chance to pick another letter if they don't guess a letter from the word.
