@@ -101,8 +101,8 @@ The logic of the game goes like:
 - user is prompted to enter a letter
 - the letter is validated
 - the letter is verified to see if it is part of the secret word
-  -if it isn't lives would be lost
-  -if it is it gets added to the word_guessed attribute. Multiple instances of a letter do not count i.e it is considered as one letter. The set data structure is used to handle this case. And num_letters is decremented indicating user is getting closer to winning.
+  - if it isn't lives would be lost
+  - if it is it gets added to the word_guessed attribute. Multiple instances of a letter do not count i.e it is considered as one letter. The set data structure is used to handle this case. And num_letters is decremented indicating user is getting closer to winning.
 - The user
   - wins when they have a non-negative number of lives and num_letters is 0.
   - loses when they have zero lives before num_letters is down to 0.
