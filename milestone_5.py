@@ -45,7 +45,6 @@ def play_game(word_list):
     num_lives = 5
     game = Hangman(word_list, num_lives)
     while True:
-        # print("still in the  'play_game' while loop")
         if game.num_lives == 0:
             print("You lost")
             return

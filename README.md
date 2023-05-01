@@ -91,3 +91,18 @@ def ask_for_input(self):
                    break
 
 ```
+
+# Milestone 5
+
+In this milestone I added a play_game function that serves as a container of the game logic. It is like the functional interface so to speak.
+The game wouldn't stop until I spotted a bug and added a break to the else block of the ask_for_input method.
+The logic of the game goes like:
+
+- user is prompted to enter a letter
+- the letter is validated
+- the letter is verified to see if it is part of the secret word
+  -if it isn't lives would be lost
+  -if it is it gets added to the word_guessed attribute. Multiple instances of a letter do not count i.e it is considered as one letter. The set data structure is used to handle this case. And num_letters is decremented indicating user is getting closer to winning.
+- The user
+  - wins when they have a non-negative number of lives and num_letters is 0.
+  - loses when they have zero lives before num_letters is down to 0.
