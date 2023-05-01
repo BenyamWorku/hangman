@@ -44,6 +44,7 @@ class Hangman():
                     break
 
 
-word_list = ["avocado", "bananas", "apples", "mangoes", "papaya"]
+'''word_list = ["avocado", "bananas", "apples", "mangoes", "papaya"]
 game = Hangman(word_list)
 game.ask_for_input()
+'''
