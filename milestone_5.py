@@ -20,13 +20,12 @@ class Hangman():
                     self.word_guessed[i] = guess
             self.num_letters -= 1
         else:
-            self.num_lives = self.num_lives - 1
+            self.num_lives = self.num_lives - 1  # life is lost for just wrong guesses
+            print(self.num_lives)
             print(f"Sorry, {guess} is not in the word.")
             print(f"You have {self.num_lives} lives left.")
 
     def ask_for_input(self):
-        if self.num_lives <= 0:
-            print("You lost")
 
         while True:
             guess = input(
@@ -38,21 +37,26 @@ class Hangman():
             else:
                 self.check_guess(guess)
                 self.list_of_guesses.append(guess)
-        return (self.num_lives, self.num_letters)
+                # this is critical to quit the while loop.Beware of infinite loop.
+                break
 
 
 def play_game(word_list):
     num_lives = 5
     game = Hangman(word_list, num_lives)
     while True:
-        game.ask_for_input()
-        if game.num_lives <= 0:
+        # print("still in the  'play_game' while loop")
+        if game.num_lives == 0:
             print("You lost")
-            break
+            return
+        if game.num_letters > 0:
+            game.ask_for_input()
         if game.num_letters == 0:
-            print("Congratulations. You won the game!")
-            break
+            print(
+                f"Congratulations. You won the game!The word was {game.word}")
+            return
 
 
 if __name__ == '__main__':
-    play_game(["avocado", "bananas", "apples", "mangoes", "papaya"])
+    word_list = ["avocado", "bananas", "apples", "mangoes", "papaya"]
+    play_game(word_list)
