@@ -9,7 +9,6 @@ class Hangman():
         self.num_lives = num_lives
         self.num_letters = len(set(self.word))
         self.list_of_guesses = []
-        # list_of_guesses- A list of the guesses that have already been tried. Set this to an empty list initially.
 
     def check_guess(self, guess):
 
@@ -28,7 +27,7 @@ class Hangman():
     def ask_for_input(self):
         while True:
             guess = input(
-                f"Guess a letter that you think is a part of the secret word {self.word}.")
+                "Guess a letter that you think is a part of the secret word.")
             if not (guess.isalpha()) or len(guess) != 1:
                 print("Invalid letter. Please, enter a single alphabetical character.")
             elif guess in self.list_of_guesses:
